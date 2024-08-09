@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Web Page</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+        }
+
+          .top-bar {
+            background-color: #4d4a4a;
+            height: 50px;
+            display: flex;
+            justify-content: space-around; /* 修改为space-around以便在缩放时改变位置 */
+            align-items: center;
+            padding: 0 10px;
+        }
+
+        .top-bar a {
+            color: white;
+            text-decoration: none;
+            padding: 0 10px;
+        }
+
+        .navbar {
+            background-color: #333;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 20px;
+        }
+
+        .navbar a {
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        .navbar a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+
+        .input-container {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .input-field {
+            width: 300px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+        .container1 {
+            max-width: 1200px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #ccc;
+            border-radius: 10px;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;}
+        .container {
+            max-width: 1200px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #ccc;
+            border-radius: 10px;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+        .sidebar {
+            flex: 1;
+            background-color: #f0f0f0;
+            padding: 20px;
+            min-width: 200px; /* 设置最小宽度 */
+            max-width: 200px; /* 设置最大宽度以防止它变得太宽 */
+        }
+
+        .sidebar a {
+            display: block;
+            text-decoration: none;
+            color: #333;
+            padding: 10px;
+        }
+
+        .sidebar a:hover {
+            background-color: #ddd;
+        }
+
+        .carousel {
+            flex: 3; /* 轮播图区域占据剩余空间 */
+            overflow: hidden;
+        }
+
+        .carousel img {
+            width: 100%;
+            height: auto;
+        }
+
+        .product-container {
+            width: 100%;
+            background-color: #f5f5f5;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .product-list {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+
+        .product-item {
+            margin: 10px;
+        }
+
+        .product-image {
+            width: 100%;
+            max-width: 250px;
+            height: auto;
+        }
+        .product-image1 {
+            width: 100%;
+            max-width: 350px;
+            height: auto;
+        }
+
+        .product-caption {
+            font-size: 16px;
+            margin-top: 10px;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            max-width: 800px;
+            margin: 20px auto;
+            background-color:  #ccc;
+        }
+
+        th, td {
+            padding: 10px;
+            text-align: left;
+        }
+
+        thead {
+            background-color: #ccc;
+        }
+
+        tbody tr:nth-child(even) {
+            background-color:  #ccc;
+        }
+
+        a {
+            text-decoration: none;
+            color: #333;
+        }
+
+        .qrcode-container {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .qrcode-container img {
+            margin-right: 10px;
+            width: 100px;
+            height: 100px;
+        }
+    </style>
+</head>
+<body>
+    <div class="top-bar">
+        <a href="#">请先登录</a> |
+        <a href="#">免费注册</a> |
+        <a href="#">我的订单</a> |
+        <a href="#">会员中心</a>
+    </div>
+
+    <!-- 导航栏 -->
+    <div class="navbar">
+        <div class="logo">
+            <img src="images/logo.png" alt="logo" style="height: 60px;">
+        </div>
+        <div>
+            <a href="#">首页</a>
+            <a href="#">生鲜</a>
+            <a href="#">美食</a>
+            <a href="#">餐厨</a>
+            <a href="#">电气</a>
+            <a href="#">居家</a>
+        </div>
+    </div>
+
+    <!-- 输入框 -->
+    <div class="input-container">
+        <input type="text" class="input-field" placeholder="搜一搜...">
+    </div>
+
+    <!-- 侧边栏和轮播图 -->
+    <div class="container1">
+        <div class="sidebar">
+            <a href="#">首页</a>
+            <a href="#">关于我们</a>
+            <a href="#">产品</a>
+            <a href="#">联系我们</a>
+            <a href="#">餐饮</a>
+            <a href="#">居家</a>
+            <a href="#">电器</a>
+            <a href="#">母婴</a>
+            <a href="#">服饰</a>
+            
+        </div>
+        <div class="carousel">
+            <img src="images/banner1.png" alt="图片1">
+        </div>
+    </div>
+
+    <!-- 产品列表 -->
+    <div class="product-container">
+        <div class="product-list">
+           
+            <div class="product-item">
+                <img class="product-image" src="images/goods1.png" alt="产品1">
+                <div class="product-caption">产品1描述</div>
+            </div>
+            <div class="product-item">
+                <img class="product-image" src="images/goods2.png" alt="产品2">
+                <div class="product-caption">产品2描述</div>
+            </div>
+            <div class="product-item">
+                <img class="product-image" src="images/goods3.png" alt="产品"3>
+                <div class="product-caption">产品2描述</div>
+            </div>
+            <div class="product-item">
+                <img class="product-image" src="images/goods4.png" alt="产品4">
+                <div class="product-caption">产品2描述</div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="product-container">
+        <div class="product-list">
+   
+            <div class="product-item">
+                <img class="product-image" src="images/recommend1.png" alt="产品1">
+                <div class="product-caption">产品1描述</div>
+            </div>
+            <div class="product-item">
+                <img class="product-image" src="images/recommend2.png" alt="产品2">
+                <div class="product-caption">产品2描述</div>
+            </div>
+            <div class="product-item">
+                <img class="product-image" src="images/recommend3.png" alt="产品"3>
+                <div class="product-caption">产品2描述</div>
+            </div>
+            <div class="product-item">
+                <img class="product-image" src="images/recommend4.png" alt="产品4">
+                <div class="product-caption">产品2描述</div>
+            </div>
+        </div>
+    </div>
+    <div class="product-container">
+        <div class="product-list">
+        
+            <div class="product-item">
+                <img class="product-image" src="images/hot1.png" alt="产品1">
+                <div class="product-caption">产品1描述</div>
+            </div>
+            <div class="product-item">
+                <img class="product-image" src="images/hot2.png" alt="产品2">
+                <div class="product-caption">产品2描述</div>
+            </div>
+            <div class="product-item">
+                <img class="product-image" src="images/hot3.png" alt="产品"3>
+                <div class="product-caption">产品2描述</div>
+            </div>
+            <div class="product-item">
+                <img class="product-image" src="images/hot4.png" alt="产品4">
+                <div class="product-caption">产品2描述</div>
+            </div>
+        </div><hr>
+    </div>
+    <div class="product-container">
+        <div class="product-list">
+       
+            <div class="product-item">
+                <img class="product-image1" src="images/topic1.png" alt="产品1">
+                <div class="product-caption">产品1描述</div>
+            </div>
+            <div class="product-item">
+                <img class="product-image1" src="images/topic2.png" alt="产品2">
+                <div class="product-caption">产品2描述</div>
+            </div>
+            <div class="product-item">
+                <img class="product-image1" src="images/topic3.png" alt="产品"3>
+                <div class="product-caption">产品2描述</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 表格和二维码 -->
+    <div class="container">
+        <div class="table-wrapper">
+            <table>
+                <thead>
+                    <tr>
+                        <th>购物指南</th>
+                        <th>配送方式</th>
+                        <th>关于我们</th>
+                        <th>售后服务</th>
+                        <th>服务热线</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><a href="#">购物流程</a></td>
+                        <td><a href="#">配送运费</a></td>
+                        <td><a href="#">平台规则</a></td>
+                        <td><a href="#">售后政策</a></td>
+                        <td><a href="#">在线客服</a></td>
+                    </tr>
+                    <tr>
+                        <td><a href="#">支付方式</a></td>
+                        <td><a href="#">配送范围</a></td>
+                        <td><a href="#">联系方式</a></td>
+                        <td><a href="#">退款说明</a></td>
+                        <td><a href="#">客服电话400-4000600</a></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="qrcode-container">
+            <img src="images/wechat.png" alt="微信公众号">
+            <img src="images/app.png" alt="app的二维码">
+        </div>
+    </div>
+</body>
+</html>
